@@ -44,7 +44,7 @@ class MultiClassPerceptronTest2 extends FlatSpec with Matchers {
       if (Math.abs(model.prediction(data._1) - data._2) <0.01) 1.0 else 0.0
     }).reduce((x,y) => x + y) / test_features.count() * 100
 
-    assert(accuracy > 50)
+    assert(accuracy > 30)
 
   }
 }

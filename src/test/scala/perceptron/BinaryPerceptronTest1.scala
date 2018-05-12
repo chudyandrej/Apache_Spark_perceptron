@@ -36,7 +36,7 @@ class BinaryPerceptronTest1 extends FlatSpec with Matchers {
 
     val act_f = new PerceptronActFunction
     val model = new BinaryPerceptron(0.002, 500, act_f.sigmoid)
-    model.fit(train_features, train_label)
+    model.fit(train_features, train_label, logging = false)
 
     val X_y = test_features.zip(test_labels)
     val accuracy = X_y.map(data => {
